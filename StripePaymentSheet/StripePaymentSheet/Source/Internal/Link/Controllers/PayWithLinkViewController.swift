@@ -115,7 +115,7 @@ final class PayWithLinkViewController: BottomSheetViewController {
         /// Returns [.card] as fallback if no types are supported after filtering.
         func getSupportedPaymentDetailsTypes(linkAccount: PaymentSheetLinkAccount) -> Set<ParsedEnum<ConsumerPaymentDetails.DetailsType>> {
             let allSupportedPaymentDetailsTypes = linkAccount.supportedPaymentDetailsTypes(for: elementsSession)
-            
+
             // TODO(jkelle): Remove this line once we want to render PMs we don't have explicit support for.
             // This will be when the `display` metadata is sent in the payment_details/list response
             // https://docs.google.com/document/d/1x834BjHYro9-bDoAVaqgHm7LDPDwzpk4z_5BvxYwwtU

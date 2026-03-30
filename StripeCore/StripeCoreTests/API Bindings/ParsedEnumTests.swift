@@ -7,12 +7,12 @@ import Foundation
 @_spi(STP)@testable import StripeCore
 import XCTest
 
-fileprivate enum Color: String, SafeParsedEnumCodable {
+private enum Color: String, SafeParsedEnumCodable {
     case red = "RED"
     case blue = "BLUE"
 }
 
-fileprivate struct Container: Codable {
+private struct Container: Codable {
     let color: ParsedEnum<Color>
     let colors: [ParsedEnum<Color>]
 }

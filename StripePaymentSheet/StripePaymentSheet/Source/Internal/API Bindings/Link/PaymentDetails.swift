@@ -127,15 +127,18 @@ extension ConsumerPaymentDetails {
 // MARK: - Details
 /// :nodoc:
 extension ConsumerPaymentDetails {
+
+    // swiftlint:disable:next enum_safe_decodable
     enum DetailsType: String, SafeParsedEnumCodable {
         case card = "CARD"
         case bankAccount = "BANK_ACCOUNT"
     }
 
+    // swiftlint:disable:next enum_safe_decodable
     enum Details: Decodable {
         case card(card: Card)
         case bankAccount(bankAccount: BankAccount)
-        
+
         // TODO(jkelle): We'll add the `display` metadata
         // [Proposal](https://docs.google.com/document/d/1x834BjHYro9-bDoAVaqgHm7LDPDwzpk4z_5BvxYwwtU)
         case unparsable(rawValue: String)

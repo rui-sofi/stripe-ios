@@ -3,9 +3,9 @@
 //  StripePaymentSheetTests
 //
 
-import XCTest
 @testable@_spi(STP) import StripeCore
 @testable@_spi(STP) import StripePaymentSheet
+import XCTest
 
 class ConsumerPaymentDetailsEncodingTests: XCTestCase {
 
