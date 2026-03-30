@@ -42,7 +42,6 @@ extension PayWithLinkViewController {
             let paymentPicker = LinkPaymentMethodPicker(linkConfiguration: context.linkConfiguration)
             paymentPicker.delegate = self
             paymentPicker.dataSource = self
-            paymentPicker.supportedPaymentMethodTypes = viewModel.supportedPaymentMethodTypes
             paymentPicker.billingDetails = context.configuration.defaultBillingDetails
             paymentPicker.billingDetailsCollectionConfiguration = context.configuration.billingDetailsCollectionConfiguration
             paymentPicker.linkAppearance = viewModel.linkAppearance

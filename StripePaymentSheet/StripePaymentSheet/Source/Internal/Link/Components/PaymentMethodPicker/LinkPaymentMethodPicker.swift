@@ -74,10 +74,7 @@ final class LinkPaymentMethodPicker: UIView {
         guard let dataSource else { return false }
         return selectedPaymentMethod.map { dataSource.isPaymentMethodSupported($0) } ?? false
     }
-
-    var supportedPaymentMethodTypes: Set<ParsedEnum<ConsumerPaymentDetails.DetailsType>> =
-        Set(ConsumerPaymentDetails.DetailsType.allCases.map(ParsedEnum.init))
-
+    
     var selectedPaymentMethod: ConsumerPaymentDetails? {
         let count = dataSource?.numberOfPaymentMethods(in: self) ?? 0
 
